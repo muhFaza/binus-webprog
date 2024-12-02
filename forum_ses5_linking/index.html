@@ -3,7 +3,7 @@
   <head>
     <title>BINUS Learning Management System</title>
     <link rel="stylesheet" href="style.css" />
-    <meta name="author" content="Muhammad Faza - 2502141990">
+    <meta name="author" content="Muhammad Faza - 2502141990" />
   </head>
   <body>
     <header>
@@ -12,12 +12,12 @@
         alt=""
       />
       <div>
-          <h1>Welcome to Binus LMS</h1>
-          <nav>
-            <a href="#">Home</a>
-            <a href="#">Courses</a>
-            <a href="#">Profile</a>
-          </nav>
+        <h1>Welcome to Binus LMS</h1>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Courses</a>
+          <a href="#">Profile</a>
+        </nav>
       </div>
     </header>
 
@@ -38,10 +38,20 @@
       <section class="course-content">
         <h2>Web Programming</h2>
         <p>Pertemuan 3 (Session 5) : Linking and Embedding CSS</p>
-        <button>
-          <a href="https://lms.binus.ac.id/lms/course" target="_blank">Forum</a>
+        <button onclick="confirmRedirect()">
+          Forum
         </button>
       </section>
     </main>
   </body>
+
+  <script>
+    function confirmRedirect(e) {
+      if (confirm("This will redirect you to the Binus LMS forum. Continue?")) {
+        window.open("https://lms.binus.ac.id/lms/course", "_blank");
+      } else {
+        return false;
+      }
+    }
+  </script>
 </html>
